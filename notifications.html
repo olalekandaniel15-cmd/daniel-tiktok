@@ -1,0 +1,1 @@
+{% extends "base.html" %}{% block content %}<section class="panel wide-panel"><small>WHAT'S HAPPENING</small><h1>Notifications</h1>{% for n in rows %}<div class="notice"><b>@{{ n.username or 'A member' }}</b> {{ n.message }} <small>{{ n.created_at[:16] }}</small></div>{% else %}<p>No notifications yet.</p>{% endfor %}</section>{% endblock %}
